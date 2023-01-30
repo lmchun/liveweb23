@@ -7,24 +7,37 @@
             console.log("hi")
             const variable = 12;
             console.log(variable)
+            const audioBam = new Audio("assets/aud/bamforest.wav")
                        
             window.addEventListener('load', function(){
-                let doing = document.getElementById("divone")
+                //let changeName = document.getElementById("move")
                  //the console log is running before the html runs
-                console.log(doing)
+                // console.log(doing)
 
-                doing.addEventListener('click', function(){
-                    doing.style.backgroundColor = "red"
-                })
-
-                //it didnt work 
-                // doing.addEventListener('onmouseover', function(){
-                //     doing.style.cursor = "pointer"
+                // changevid.addEventListener('click', function(){
+                //     document.getElementById("move").src = "assets/vid/dangoself.mp4";
                 // })
+                
+                //var.addEventListener('mouseover', function(){
+                        //audioBam.play();
+              //  }
+                //)
             })
 
+            function changeMe() {
+                // if(snow=true){
+                    document.getElementById("move").src = "assets/vid/dangoself.mp4";
+                // }else{
+                    // document.getElementById("move").src = "assets/vid/snowself.mp4";
+                //}
+            }
 
     </script>
+    <style>
+        div {
+            display: flex; justify-content: center; margin: 5vw;
+        }
+    </style>
 </head>
 <body>
     <!-- <nav>
@@ -32,17 +45,20 @@
         <span>idk</span>
     </nav> -->
     <h1>Self Portrait</h1>
-    <div style=" display: flex; justify-content: center; margin: 5vw;">
-        <video width="1720" controls autoplay muted>
+    <div>
+        <video id="move" width="1720" controls autoplay muted>
             <source src="assets/vid/snowself.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video>
     </div>
-   <div style="display: flex; justify-content: center; margin: 5vw;">
+   <div>
     <audio controls>
         <source src="assets/aud/bamforest.wav" type="audio/wav">
         Your browser does not support the audio tag.
       </audio>
+    </div>
+    <div>
+        <button onclick="changeMe()">Click me</button>
     </div>
 </body>
 </html>
