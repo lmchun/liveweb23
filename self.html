@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Self Portrait</title>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript">
+            // alert("hello there, welcome to the webpage");
+            console.log("hi")
+            const variable = 12;
+            console.log(variable)
+                       
+            window.addEventListener('load', function(){
+                let doing = document.getElementById("divone")
+                 //the console log is running before the html runs
+                console.log(doing)
+
+                doing.addEventListener('click', function(){
+                    doing.style.backgroundColor = "red"
+                })
+
+                //it didnt work 
+                // doing.addEventListener('onmouseover', function(){
+                //     doing.style.cursor = "pointer"
+                // })
+            })
+
+
+    </script>
+</head>
+<body>
+    <!-- <nav>
+        <span>The title of the site</span>
+        <span>idk</span>
+    </nav> -->
+    <h1>Self Portrait</h1>
+    <div style=" display: flex; justify-content: center; margin: 5vw;">
+        <video width="1720" controls autoplay muted>
+            <source src="assets/vid/snowself.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+    </div>
+   <div style="display: flex; justify-content: center; margin: 5vw;">
+    <audio controls>
+        <source src="assets/aud/bamforest.wav" type="audio/wav">
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+</body>
+</html>

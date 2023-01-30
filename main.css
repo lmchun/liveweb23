@@ -1,0 +1,14 @@
+.idk{
+color: aliceblue;
+}
+
+nav {
+    display: flex;
+    background-color: DodgerBlue;
+    justify-content: space-around;
+}
+
+video {
+    max-width: 50%;
+    height: auto;
+  }
