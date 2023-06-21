@@ -1,0 +1,122 @@
+<html lang="en">
+    <head>
+        <title>QR Code Creator</title>
+        <link rel="icon" type="image/x-icon" href="assets/qr-icon.png">
+        <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script>
+         <script type="text/javascript" src="js/main.js" defer></script>
+         <script type="text/javascript" src="js/qr.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="QR Creation Tool of AR discovery hub.">   
+    </head>
+    <body>
+        <nav id="navLink">
+          </nav>
+          <!-- <iframe src="https://www.google.com/maps/d/embed?mid=1eUSU2zH-ilGRe5EOA3t_COyoQhkIFW0&ehbc=2E312F" width="640" height="480"></iframe> -->
+          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.166268163853!2d-74.00013724912603!3d40.71435614530701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a26f7cdb6db%3A0xdbdb03722e7ad673!2sDoyers%20St%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1681170025795!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+          <!-- <img src="https://maps.googleapis.com/maps/api/staticmap?center=6 Doyers St&zoom=18&size=400x400&markers=color:red%7Clabel:DoyerSt%7C6DoyersSt&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE"> -->
+          <div class="herocontent3">
+            <div class="Definecontainer">
+                <div class="gridContentHero whiteBack">
+                    <h1 class="headerPage">Register your Experience</h1>
+                    <h2>Why use it?</h2>
+                    <!-- <p>Learn more about what you need to know before you try an Augmented Reality Experience.</p> -->
+                    <ul class="checkMarks">
+                        <li>Free to add your AR experience</li>
+                        <li> Reach a larger audience of users</li>
+                        <li>Update your experience information</li>
+                    </ul>
+                    <button class="button"onclick="window.location.assign('https://forms.gle/XC9sSaRBKn59D8Qv9');">Add to google form</button>
+                </div>
+                <!-- <div class="image-div"> -->
+                    <img class="featureImage2" src="assets/cooperunion-astorplace-totem.jpg">
+                <!-- </div> -->
+            </div>
+        </div>
+        <!-- <div class="formcontent">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdsdY2xp3n8UFPqa5WPBkRzQsaxvqURq0grjxe_nNrfnTCCZg/viewform?embedded=true" width="1080" height="1080" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div> -->
+        <!-- <p>Here you can create QR codes for your experiences and link it to a preview page to tell your user about what they might need to know ahead of experiencing your work.</p> -->
+        <!-- <p>If your project has not been submitted to the database already you can still generate a QR code for your project here.</p> -->
+        <div class="contentpage">
+        <div class="qrcontainer">
+            <h2>Create a QR Code</h2>
+
+        <p>
+            Type in your link or text you want to turn into a QR code.
+        </p>
+        <div class="form">
+           <input type="text" placeholder="https://www.example.com" name="urlinput" id="urlinput" class="textbox">
+           <button class="button" id="QRtextbox" value="Create QR" onclick="replaceurl();"> Create QR</button>
+        <!-- <input type="button" value="Create QR" onclick="replaceurl();"> -->
+        </div>
+        <div class="container">
+            <div class="resultUrl" ></div>
+            <h3 id="newUrl" class="resultHeader">Project Output:</h3>
+            <hr class="hrSpace">
+            <div class="box">
+    
+                <div id="content" class="contentQr">
+                <!-- this is where the qr code will spit out -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <!--<div class="customizationbar">
+            <h3>Customize your QR Code</h3>
+
+            <button type="button" class="collapsible">Color</button>
+            <div class="customcontent">
+             <!-- color container -->
+             <!--<div class="colorbox">
+                <!-- <div class="output" id="output"></div> -->
+               <!--     <div class="result-wrp">
+                     <label>Color</label>
+                     <input type="color" id="colorWell" value="#95C066;"/>
+                     <span class="result" id="result"></span>
+                </div>
+            </div>    
+            </div>
+            <button type="button" class="collapsible">Border</button>
+            <div class="customcontent">
+
+              <!-- radius container -->
+             <!-- <div class="colorbox">
+                <label> Radius</label>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  </div>
+                <!-- <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+                </label> -->
+
+             <!--   <div class="result-wrp">
+                    <label>Color</label>
+                    <input type="color" id="colorWell" value="#95C066;"/>
+                    <span class="result" id="result"></span>
+               </div>
+              
+                     <!-- <button class="button" value="Radius" onclick="updateRadius();">Radius</button> -->
+
+               <!--       </div> 
+            <!--</div>
+            <button type="button" class="collapsible">Icon</button>
+            <div class="customcontent">
+                <div class="colorbox">
+                    <div id="overlay">
+                        <label for="file" class="custom-upload">Select Image</label>
+                        <input id="file" type="file" name="filename" accept="image/*">
+                      </div>
+                    <!-- <button class="button" value="Icon" onclick="updateIcon();">Add Icon</button>
+                    <input type="file" accept="image/jpeg, image/png, image/jpg">
+                    <output></output> -->
+                <!--</div>
+            </div>
+            </div>-->
+        </div>
+    </body>
+</html>

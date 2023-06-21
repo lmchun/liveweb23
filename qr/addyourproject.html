@@ -1,0 +1,77 @@
+<html lang="en">
+    <head>
+        <title>Add your Project</title>
+        <link rel="icon" type="image/x-icon" href="/assets/qr-icon.png">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+        
+        <!-- QR CODE creator -->
+        <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script>
+         <script type="text/javascript" src="js/main.js" defer></script>
+         <script type="text/javascript" src="js/qr.js" defer></script>
+         
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <meta charset="utf-8" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Home page of AR discovery hub.">
+    <script>
+        //   console.log(document.getElementById.apply("qrdisplay"));
+
+    </script>
+    
+    </head>
+    <body>
+        <nav>
+            <ul class="topnav" id="top">
+                <li> 
+                    <a href="index.html" class="iconVert"> 
+                        <img src="assets/qr-icon.png" class="icon" alt="QR code icon"> 
+                    </a>
+                </li>
+                <li> 
+                    <a href="index.html" class="iconVert"> 
+                        <p class="titlenav">AR Explorer</p>
+                    </a>
+                </li>
+               
+                <li class="right">
+                    <a href="about.html">About</a>
+                </li>
+                <li class="right">
+                    <a href="database.html">Search Experiences</a>
+                </li>
+                <li class="right">
+                    <a href="qr.html">Add Your Experience</a>
+                </li>
+            </ul>
+        </nav>hr>
+        <!-- <h1>QR Code Creator </h1> -->
+        <p>
+            Type in your link or text you want to turn into a QR code.
+        </p>
+        <div class="form">
+           <input type="text" placeholder="https://www.example.com" name="urlinput" id="urlinput" class="textbox">
+           <button class="button" id="QRtextbox" value="Create QR" onclick="replaceurl();"> Create QR</button>
+        <!-- <input type="button" value="Create QR" onclick="replaceurl();"> -->
+        </div>
+        <div class="container">
+            <div class="box">
+                <div id="content" class="contentQr">
+                <!-- this is where the qr code will spit out -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container resultUrl" id="newUrl"></div>
+
+
+
+    
+
+
+    </body>
+
+</html>

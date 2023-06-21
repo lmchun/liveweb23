@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+    <title>AR Experience Database</title>
+    <link rel="icon" type="image/x-icon" href="assets/qr-icon.png">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Search page of AR discovery hub.">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <script type="text/javascript" src="js/main.js" defer></script>
+    <script type="text/javascript" src="js/jsonselector.js" defer></script>
+</head>
+<body>
+    <nav id ="navLink">
+      </nav>
+ <!-- <h1 class="headerPage">AR Finder </h1> -->
+
+    <!-- <div class="filters">
+        <label for="myCheck">New York</label> 
+        <input type="checkbox"id="localSearch" onclick="">
+      <button id="genreSearch" onclick="" >New York</button>
+    </div> -->
+
+    <div class="searchbar" id="searchbar">
+        <!-- Type in a title or author to search for an experience. -->
+            <!-- <p>Search for an AR experience.</p> -->
+        <div class="search-wrapper">
+            <div class="backgroundCardSearch">
+                 <!-- <label><h3 class="h3Space">Search AR Experience</h3></label> -->
+            <label class="searchLabel"> Type a location or title of an experience </label>
+            <div class="searchbarContainer">
+            <input type="search" id="search" placeholder="i.e. Doyer St, New York, Tiny Frog" class="searchfield" data-search>
+            <button type="submit" class="buttonsearch" ><img src="assets/magnify-search.svg"></button>
+        </div>
+            </div>
+        </div>
+        <!-- <div class="container-btn">
+            <div class="filterbuttons">
+                <button onclick="" class="buttonfilter">Site Specific</button>
+                <button onclick="" class="buttonfilter">Filter 2</button>
+            </div>
+        </div> -->
+    </div>
+        <div class="contentpage2">
+   
+
+    <div class="xr-cards" data-xrs-container>
+        </div>
+
+    <div class="xr-details" data-xrs-page-container>
+        </div>
+    <hr id="space">
+
+</div> 
+    <div class="jumpup" id="jumptop">
+        <a href="#top" class="topup">To the Top</a>
+    </div>
+    <footer>
+
+    </footer>
+    <!--                                   -->
+<template data-xrs-cards>
+    <div class="card">
+        <div data-idCard>
+        <div class="grid-card-container">
+            <div class="Cardcontainer">
+                <div class="grid-item-image">
+                    <div class="urltn"data-urltn></div>
+                </div>
+                <div class="grid-item-text">
+                    <div class="">
+                        <div class="header" data-header></div>
+                        <div class="body" data-body></div>
+                    </div>
+                
+                </div>
+                <div class="grid-item-map maptn" data-maptn id="cardMap">
+                    <!-- <div class="maptn" data-maptn></div> -->
+                </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+</template>
+<template data-xrs-page>
+    <div class="xr-detail-page">
+        <!-- <div id="myModal" class="beforeYouGo modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+              </div>
+        </div> -->
+        <!-- <div class="grid-page-container"> -->
+
+
+    <div id="overlay"> 
+        <div id="popup">
+            <button id="close-button">Close me</button>
+            popup overlay
+        </div>
+    </div>
+            <div class="pageHeaderContainer">
+                
+                <div class="pageHeader">
+                    <div class="headerdet">
+                        <img class="tndet" data-tn>
+                        <div class="headerText">
+                         <h1 class="title" data-title></h1>
+                         <p class="descr"data-desc></p>
+                         <div class="filterbuttons"><span data-try></span>
+                            </div>
+                        </div>
+                  </div>
+                  <div class="descripContainer">
+                    <div class="descripBox">
+                      <h4 class="subTitle">Creator</h4>
+                     <img class="typeIcon" src="assets/creator.svg"> 
+                      <p data-creator></p>
+                        
+                      </div>
+                    <div class="descripBox">
+                      <h4 class="subTitle">Type of Effect 
+                        <span id="hintTypeAR" data-ARtooltip>
+                        <img class="hintIcon" src="assets/hinticon.svg">
+                        </span>
+                    </h4>
+                      <img id="typeIcon" src="https://picsum.photos/50/50"> 
+                      <p data-typeAR></p>
+                    </div>
+                    <div class="descripBox">
+                        <h4 class="subTitle">Keywords</h4>
+                        <img class="typeIcon" src="assets/book.svg"> 
+                        <p data-keyword></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="pageMap">
+                    <div data-map>
+                    </div>
+                </div>
+            </div>
+        <div class="grid-item">
+            <!-- <div class="container" data-urltn> -->
+            <!-- <div class="detailcontainer">
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track" data-detailImg>
+                    </div>
+                    <div class="glide__bullets" data-glide-el="controls[nav]"data-detailImgBullets>
+                    </div>  
+                </div>
+                <p class="caption" data-caption></p>
+
+            </div> -->
+        </div>
+        <!-- <div class="div-page-container-text"></div> -->
+        <!-- <div class="grid-page-container-text"data-page-body> -->
+            <div class="grid-item">
+                <h3>Intro
+                </h3>
+                <p class="content"data-intro>
+                </p>
+            </div>
+            <div class="grid-item" >
+                <h3 id="details" >Details</h3>
+                <p>
+                    <span class="content" id="previewText" data-detail></span><span id="dots">...</span><span id="fullText"class="content" data-detailfull></span>                    
+                    <span onclick="readMore()" id="more">More</span>
+                </p>
+            </div>
+    <!-- </div> -->
+</template>
+
+</body>
+</html>

@@ -1,42 +1,127 @@
 <html>
-<head>
-<title>In Class Working</title>
-<!-- https://www.w3schools.com/Css/css_link.asp help with styling mouse -->
-    <link rel="stylesheet" href="main.css">
-    <script type="text/javascript">
-            // alert("hello there, welcome to the webpage");
-            console.log("hi")
-            const variable = 12;
-            console.log(variable)
-                       
-            window.addEventListener('load', function(){
-                let doing = document.getElementById("divone")
-                 //the console log is running before the html runs
-                console.log(doing)
+	<head>
+		<title> Unique Message</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="main.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="assets/favicon.png">
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="js/main.js""></script>
+		<!-- <script type="text/javascript" src="js/videosharing.js""></script> -->
+	
+		<script type="text/javascript">
+			var socket = io.connect();
+			socket.on('connect', function() {
+				console.log("Connected");
+				// document.getElementById("username").innerHTML = socket.id;
+				//you are now connected to the server
+				// item.textContent = data;
+			});
 
-                doing.addEventListener('click', function(){
-                    doing.style.backgroundColor = "red"
-                })
+			// Receive from any event
+			socket.on('chatmessage', function (data) {
+				console.log(data);
+				var messages = document.getElementById('messages');
+				var item = document.createElement('li');
+	    			// item.textContent = data;
+					item.innerHTML = `<span>${data.username}: ${data.message}</span>`;
+					item.style.color = data.color;
+  					messages.appendChild(item);
+				window.scrollTo(0, document.body.scrollHeight);
 
-                //it didnt work 
-                // doing.addEventListener('onmouseover', function(){
-                //     doing.style.cursor = "pointer"
-                // })
-            })
+			});
+			
+			var sendmessage = function(message) {
+					var userdata = {
+						'username' :  document.getElementById('username').value,
+						'message' : message,
+						'color' : "pink"
+					};
+					// 'image' : savedImage
+					// 'avatar' : "img/cat-avatar.png",
+						
+
+				//send the updated username
+				console.log("chatmessage: " + userdata.username);
+				// console.log("chatmessage: " + );
+				// socket.emit('chatmessage', message);
+				socket.emit('chatmessage', userdata);
+			};
+
+			
+
+		</script>	
+	</head>
+ <body>
+	<h2>Unique Messaging Board</h2>
+	<nav>
+		<a href="self/index.html">Self Portrait</a>
+		<a href="qr/index.html"> Thesis </a>
+		<a href="drawing/index.html">drawing TBA</a>
+		<a href="arcyoa/index.html">Midterm Aframe and P5</a>
+	</nav>
+	
+	
+	<!-- <div class="text">	
+		<span id="joining"> 1</span>
+		<span>User in the Room</span>
+	</div> -->
+	<div class="text">
+		<label>Username</label>
+		<input type="text" placeholder="Ivan T. Potatoes" id="username" class="textform messagefield" name="username">
+ 		<button class="hitsend"type="submit" onclick="document.getElementById('myusername').innerText = document.getElementById('username').value;">Enter </button>
+	</div>
+	<div class="text">	
+		<div class="userprofilebox">
+				 <div class="container">
+					<input type="image" class="avatarimg" src="assets/cat-avatar.png" alt="Submit" onclick="changeavatarimg()" id="useravataricon">			
+				</div>
+			<span style="display:inline-block; padding: 1px;"> <span id="myusername">Ivan T Potatoes</span></span> 
+		</div>
+	</div>
+
+	<div class="text" id="changeava">
+		<h4>Change avatar</h4>
+		<div class="avatarselection">
+			<input type="image" class="avatarimg icons" src="assets/cat-avatar.png" alt="cat avatar" id="cat" onclick="avatarswitch()">	
+			<input type="image" class="avatarimg icons" src="assets/dog-avatar.png" alt="dog avatar" id="dog" onclick="avatarswitch()">	
+		</div>
+	</div>
+	<hr style="width:90%;  margin: auto;">
+	<!-- video display -->
+	<!-- <video src="" id="webcamvid"></video>
+	<div id="faceplacement"> -->
+		<!-- invisible background -->
+	<!-- </div>
+	
 
 
-    </script>
-</head>
-<body>
-    <nav>
-        <span>The title of the site</span>
-        <span>idk</span>
-    </nav>
-    <h1>Shrug</h1>
-    <div id="divone" class="idk">IDK</div>
-    <div id="divtwo" class="idk">IDK</div>
-    <p id="para"></p>
+	<div class="videocontroller">
+		<button type=""button src="play">Play</button>
+		<button type=""button src="" alt="pause">Pause</button>
+		<button type=""button src="stop">Stop</button>
+	</div> -->
 
-    <span></span>
+	<hr style="width:90%;  margin: auto;">
+<!-- this is where the chat window is -->
+	<div class="chat-area">
+		
+		<!-- <div id="messages" class="text chatdisplay"> -->
+		<div class="text chatdisplay">
+			<ul id="messages">
+				<li>No Messages Yet</li>
+			</ul>
+ 		</div>
+	</div>	
+	<!-- chat messaging interface -->
+	<div class="text">
+		<label>Message</label>
+		<input type="text" placeholder="hi there" id="message" class="textform messagefield" name="message">
+ 		<input class="hitsend"type="submit" value="send" onclick="sendmessage(document.getElementById('message').value);">
+	</div>
 </body>
+<!-- <script type="text/javascript" src="js/videosharing.js""></script> -->
+
 </html>

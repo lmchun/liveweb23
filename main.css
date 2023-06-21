@@ -1,14 +1,148 @@
-.idk{
-color: aliceblue;
+
+
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 1 vw;
+    /* color: red; */
+    width:90%; 
 }
 
-nav {
-    display: flex;
-    background-color: DodgerBlue;
-    justify-content: space-around;
+h2{
+    text-align: center;
+    margin: 3vw;
 }
 
-video {
-    max-width: 50%;
+.text{
+    margin: 3vw;
+}
+
+.textform{
+    padding:10px;
+    /* display:block; */
+    /* border:none; */
+    /* border-bottom:1px solid #ccc;width:100%; */
+    border:1px solid #ccc!important;
+}
+
+.chat-area{
+    height:50%;
+    border: 3vw;
+    margin: auto;
+    border-radius:1em;
+    background-color:	#f9f9f9;
+    width:90%;
+ 
+}
+
+.chatdisplay{
+    padding:2vh 0vw;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* example for changing the bullet to be an icon */
+        /* i think this can be good to add uniqueness to the users */
+    /* list-style: square inside url("sqpurple.gif"); */
+}
+
+li {
+    list-style-type: none;
+    /* border: 2px solid red; */
+}
+#messages { list-style-type: none; margin: 0; padding: 0; }
+#messages > li { padding: 0.5rem 1rem; }
+#messages > li:nth-child(odd) { background: #efefef; }
+
+#myusername {
+    color:#005377;
+
+}
+
+.userprofilebox{
+        /* list-style-type: none; */
+    border: 2px none;
+    background-color: #eaf0fa;
+    border-radius: 1vw;
+    padding: 2vw;
+    /* display: flex; */
+    /* justify-content: flex-start; */
+    /* overflow: hidden; */
+}
+
+.avatarimg{
+    /* height: 5vh;
+    /* float: left; */
+    /*display:inline-block;
+ 
+    z-index: -1;
+    /* position: absolute; */
+    /* padding-top: 1vh; */
+    vertical-align: middle;
+    opacity: 1;
+    display: relative;
+    width: 100%;
     height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    /* background-color: aquamarine; */
+    
+}
+
+.container{
+
+        height: 5vh;
+        display:inline-block;
+        vertical-align: middle;
+        position: relative;
+        width:5vw;
+        /* background-color: red; */
+
+}
+.avataroverlay{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+    background-color: yellow;
+}
+
+
+/* 
+.container:hover .avatarimg {
+    background-color: yellow;
+
+  } */
+  
+  .container:hover .avataroverlay {
+    opacity: 0.7;
+
   }
+
+#changeava{
+    display: none;
+}
+
+.avatarselection{
+    display: flexbox;
+    width: 90%;
+    padding: 1vh;
+}
+
+.icons{
+    width:5vw;
+}
+
+.videocontroller{
+    padding: 2em;
+}

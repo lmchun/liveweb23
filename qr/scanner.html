@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>QR Code Scanner</title>
+    <link rel="icon" type="image/x-icon" href="assets/qr-icon.png">
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/index.css'>
+    <!-- <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <script src="js/main.js"defer></script>
+  
+</head>
+<body>  
+    <nav id ="navLink">
+        </nav>
+        <div class="backgroundDesign">
+    <div class="contentpage">
+
+    <!-- <h1>QR Scanner</h1> -->
+    <div class="scannercontainer">
+    <a href="https://laurenchun.8thwall.app/scan">
+        <h1>Discover your City</h1>
+        <div class="gridScanner">
+       <div class="tryBtnContainer">  
+        <!-- <p class="moreSpace">
+          Discovery on the go.
+        </p> -->
+        <p class="moreSpace">
+          Hold your phone up to AR Discovery QR codes in your city.
+        <!-- AR QR code scanner, scan QR codes and provide an interactive experience on a device's screen. -->
+        </p>
+        <p class="moreSpace">
+          With the immersive discovery mode, you can quickly try AR experiences out!
+        </p>
+        <button class="herobuttons spacearoundbtn" onclick="window.location.assign('https://laurenchun.8thwall.app/scan'); ">Try Now</button>
+      </div>
+      <!-- <div class="tryBtnContainer"> -->
+        <img src="https://s6.imgcdn.dev/S8Nb8.png" class="heroscreenshot">
+      <!-- </div> -->
+      </div>
+    </a>
+</div>
+
+        <!-- <div class="container">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide"><img src="https://s6.imgcdn.dev/SEmlK.jpg" alt=""></li>
+                    <li class="glide__slide"><img src="https://s6.imgcdn.dev/SEqVo.jpg" alt=""></li>
+                    <li class="glide__slide"><img src="https://s6.imgcdn.dev/SEFpO.jpg" alt=""></li>
+                </ul>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+                </div>
+               
+            </div>
+        </div> -->
+    </div>
+  </div>
+    <!-- <script>
+      const config = {
+        type: "carousel",
+        gap: 15, // add a 15px gap between slides
+        peek: {
+          before: 0,
+          after: 100 // adjust the peek option to account for the gap
+        },
+        breakpoints: {
+          768: {
+            perView: 2,
+            gap: 10, // adjust the gap for smaller screens
+            peek: {
+              before: 0,
+              after: 50 // adjust the peek option for smaller screens
+            }
+          },
+          576: {
+            perView: 1,
+            gap: 5, // adjust the gap for even smaller screens
+            peek: {
+              before: 0,
+              after: 25 // adjust the peek option for even smaller screens
+            }
+          }
+        },
+          // initialize the Bullets component
+        bullets: '.glide__bullet',
+      };
+      new Glide('.glide', config).mount()
+    </script> -->
+</body>
+</html>
